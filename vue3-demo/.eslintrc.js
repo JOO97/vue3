@@ -34,7 +34,8 @@ module.exports = {
     'vue/object-curly-spacing': 'error',
     'no-useless-escape': 'off',
     'vue/attribute-hyphenation': 'off',
-    'vue/custom-event-name-casing': 'off'
+    'vue/custom-event-name-casing': 'off',
+    'vue/no-v-model-argument': 'off'
   },
   overrides: [
     {
