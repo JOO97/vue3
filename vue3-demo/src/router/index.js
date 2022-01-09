@@ -2,7 +2,7 @@ import {
   createRouter,
   createWebHistory
 } from 'vue-router'
-import Home from '../views/06_vue_advanced'
+import Home from '../views/07_vueRouter'
 
 const routes = [{
     path: '/',
@@ -14,6 +14,11 @@ const routes = [{
     name: 'About',
     component: () =>
       import( /* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/:pathMatch(.*)', //路径被解析为字符串
+    // path: '/:pathMatch(.*)*', //路径被解析为数组
+    component: () => import( /* webpackChunkName: "notFound" */ '../views/NotFound.vue')
   }
 ]
 
