@@ -16,5 +16,4 @@ const changeUser = () => {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

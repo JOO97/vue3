@@ -1,10 +1,8 @@
-import {
-  createRouter,
-  createWebHistory
-} from 'vue-router'
-import Home from '../views/07_vueRouter'
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/05_composition_api'
 
-const routes = [{
+const routes = [
+  {
     path: '/',
     name: 'Home',
     component: Home
@@ -13,12 +11,13 @@ const routes = [{
     path: '/about',
     name: 'About',
     component: () =>
-      import( /* webpackChunkName: "about" */ '../views/About.vue')
+      import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
     path: '/:pathMatch(.*)', //路径被解析为字符串
     // path: '/:pathMatch(.*)*', //路径被解析为数组
-    component: () => import( /* webpackChunkName: "notFound" */ '../views/NotFound.vue')
+    component: () =>
+      import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue')
   }
 ]
 
